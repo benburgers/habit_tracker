@@ -24,3 +24,6 @@
 - [Reports Page: 02 Visualize completed habits](ReportsPage/ReportsPage_02_visualize_completed_habits.md) (Low)
 - [Reports Page: 03 View all habits](ReportsPage/ReportsPage_03_view_all_habits.md) (Low)
 - [Login: 04 Store user data](Login/Login_04_store_user_data.md) (Low)
+- [Persistent data: 01 Data persists across sessions](PersistentData/PersistentData_01_data_persists_across_sessions.md) (Low)
+- [Persistent data: 02 Save preferences](PersistentData/PersistentData_02_save_preferences.md) (Low)
+- [Persistent data: 03 Activity logs](PersistentData/PersistentData_03_activity_logs.md) (Low)
