@@ -23,3 +23,4 @@
 - [Reports Page: 01 View weekly report](ReportsPage/ReportsPage_01_view_weekly_report.md) (Low)
 - [Reports Page: 02 Visualize completed habits](ReportsPage/ReportsPage_02_visualize_completed_habits.md) (Low)
 - [Reports Page: 03 View all habits](ReportsPage/ReportsPage_03_view_all_habits.md) (Low)
+- [Login: 04 Store user data](Login/Login_04_store_user_data.md) (Low)
