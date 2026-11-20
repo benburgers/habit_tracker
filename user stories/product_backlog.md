@@ -7,6 +7,7 @@
 - [Login: 03 Error feedback on login](Login/Login_03_error_feedback_on_login.md) (High)
 - [Menu: 01 Access menu options](Menu/Menu_01_access_menu_options.md) (High)
 - [Menu: 04 Sign Out from Menu](Menu/Menu_04_sign_out_from_menu.md) (High)
+- [Settings Page: 02 Update email and password](SettingsPage/SettingsPage_02_update_email_password.md) (High)
 - [Habits Page: 01 Add new habit](HabitsPage/HabitsPage_01_add_new_habit.md) (Medium)
 - [Habits Page: 02 Delete habit](HabitsPage/HabitsPage_02_delete_habit.md) (Medium)
 - [Homepage: 01 View welcome message](Homepage/Homepage_01_view_welcome_message.md) (Medium)
@@ -31,3 +32,5 @@
 - [Persistent data: 03 Activity logs](PersistentData/PersistentData_03_activity_logs.md) (Low)
 - [Settings Menu: 01 Access settings menu](SettingsMenu/SettingsMenu_01_access_settings_menu.md) (Low)
 - [Settings Menu: 02 Categorized sections](SettingsMenu/SettingsMenu_02_categorized_sections.md) (Low)
+- [Settings Menu: 03 Enable or disable certain settings](SettingsMenu/SettingsMenu_03_enable_disable_settings.md) (Low)
+- [Settings Page: 01 Enable dark mode](SettingsPage/SettingsPage_01_enable_dark_mode.md) (High)
