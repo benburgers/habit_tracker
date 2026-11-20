@@ -1,5 +1,7 @@
 # Product backlog
 ## Issues
+- [API Client: 01 Data persistence](ApiClient/ApiClient_01_data_persistence.md) (High)
+- [API Client: 02 Data retrieval](ApiClient/ApiClient_02_data_retrieval.md) (High)
 - [Login: 01 Account registration](Login/Login_01_account_registration.md) (High)
 - [Login: 02 Account login](Login/Login_02_account_login.md) (High)
 - [Login: 03 Error feedback on login](Login/Login_03_error_feedback_on_login.md) (High)
@@ -27,3 +29,5 @@
 - [Persistent data: 01 Data persists across sessions](PersistentData/PersistentData_01_data_persists_across_sessions.md) (Low)
 - [Persistent data: 02 Save preferences](PersistentData/PersistentData_02_save_preferences.md) (Low)
 - [Persistent data: 03 Activity logs](PersistentData/PersistentData_03_activity_logs.md) (Low)
+- [Settings Menu: 01 Access settings menu](SettingsMenu/SettingsMenu_01_access_settings_menu.md) (Low)
+- [Settings Menu: 02 Categorized sections](SettingsMenu/SettingsMenu_02_categorized_sections.md) (Low)
