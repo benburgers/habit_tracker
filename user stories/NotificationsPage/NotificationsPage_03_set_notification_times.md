@@ -1,4 +1,4 @@
-# User Story Template
+# Set notification times
 
 **Title:**
 _As a user, I want to have the option to receive notifications three times a day (morning, afternoon, evening), so that I get timely reminders throughout the day to complete my habits._

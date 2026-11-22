@@ -1,4 +1,4 @@
-# User Story Template
+# Add habits for notifications
 
 **Title:**
 _As a user, I want to select specific habits to receive notifications for, so that I only get reminders for the habits I am actively working on._

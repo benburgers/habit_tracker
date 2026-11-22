@@ -1,4 +1,4 @@
-# User Story Template
+# Enable dark mode
 
 **Title:**
 _As a user, I want to enable dark mode on the settings page, so that I can reduce eye strain during nighttime usage._

@@ -1,4 +1,4 @@
-# User Story Template
+# Categorized sections
 
 **Title:**
 _As a user, I want to see categorized sections in the settings menu, so that I can quickly find the options I need._
