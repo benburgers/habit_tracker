@@ -1,7 +1,7 @@
-import 'package:fluttertoast/fluttertoast.dart';
 import 'package:material_ui/material_ui.dart';
-import 'package:shared_preferences/shared_preferences.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 
+import 'habit_tracker_screen.dart';
 import 'login_screen.dart';
 
 class RegisterScreen extends StatefulWidget {
@@ -59,36 +59,32 @@ class _RegisterScreenState extends State<RegisterScreen> {
     });
   }
 
+  void _showToast(String message) {
+    Fluttertoast.showToast(
+      msg: message,
+      toastLength: Toast.LENGTH_SHORT,
+      gravity: ToastGravity.BOTTOM,
+      backgroundColor: Colors.red,
+      textColor: Colors.white,
+      fontSize: 16.0,
+    );
+  }
+
   void _register() async {
-    if (_validateForm()) {
-      await _saveUserData();
-      Navigator.pushNamed(context, '/login'); // Navigate to the login screen
-    } else {
-      Fluttertoast.showToast(
-        msg: "Validation error. Please fill in all fields.",
-        toastLength: Toast.LENGTH_LONG,
-      );
-    }
-  }
-
-  Future<void> _saveUserData() async {
     final name = _nameController.text;
     final username = _usernameController.text;
-    SharedPreferences prefs = await SharedPreferences.getInstance();
-    prefs.setString("name", name);
-    prefs.setString("username", username);
-  }
 
-  bool _validateForm() {
-    final name = _nameController.text;
-    final username = _usernameController.text;
-    if (name == "") {
-      return false;
+    if (username.isEmpty || name.isEmpty) {
+      _showToast('Please fill in all fields');
+      return;
     }
-    if (username == "") {
-      return false;
-    }
-    return true;
+
+    Navigator.pushReplacement(
+      context,
+      MaterialPageRoute(
+        builder: (context) => HabitTrackerScreen(username: username),
+      ),
+    );
   }
 
   @override
