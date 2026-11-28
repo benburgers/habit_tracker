@@ -1,4 +1,6 @@
+import 'package:fluttertoast/fluttertoast.dart';
 import 'package:material_ui/material_ui.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 import 'login_screen.dart';
 
@@ -58,8 +60,35 @@ class _RegisterScreenState extends State<RegisterScreen> {
   }
 
   void _register() async {
-    // dummy for now
-    print("registration logic here");
+    if (_validateForm()) {
+      await _saveUserData();
+      Navigator.pushNamed(context, '/login'); // Navigate to the login screen
+    } else {
+      Fluttertoast.showToast(
+        msg: "Validation error. Please fill in all fields.",
+        toastLength: Toast.LENGTH_LONG,
+      );
+    }
+  }
+
+  Future<void> _saveUserData() async {
+    final name = _nameController.text;
+    final username = _usernameController.text;
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    prefs.setString("name", name);
+    prefs.setString("username", username);
+  }
+
+  bool _validateForm() {
+    final name = _nameController.text;
+    final username = _usernameController.text;
+    if (name == "") {
+      return false;
+    }
+    if (username == "") {
+      return false;
+    }
+    return true;
   }
 
   @override

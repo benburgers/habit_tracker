@@ -1,4 +1,6 @@
+import 'package:fluttertoast/fluttertoast.dart';
 import 'package:material_ui/material_ui.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 import 'register_screen.dart';
 
@@ -17,9 +19,42 @@ class _LoginScreenState extends State<LoginScreen> {
   final String defaultUsername = 'testuser';
   final String defaultPassword = 'password123';
 
+  Future<void> _authenticateUser() async {
+    final username = _usernameController.text;
+    final password = _passwordController.text;
+    if (username != defaultUsername || password != defaultPassword) {
+      Fluttertoast.showToast(
+        msg: "The username or password was incorrect",
+        toastLength: Toast.LENGTH_LONG,
+      );
+      return;
+    }
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    prefs.setString("username", username);
+    prefs.setString("password", password);
+  }
+
   void _login() {
-    // The login logic goes here
-    print("login logic here");
+    if (_validateForm()) {
+      _authenticateUser();
+    } else {
+      Fluttertoast.showToast(
+        msg: "Validation error. Please fill in all fields.",
+        toastLength: Toast.LENGTH_LONG,
+      );
+    }
+  }
+
+  bool _validateForm() {
+    final username = _usernameController.text;
+    final password = _passwordController.text;
+    if (username == "") {
+      return false;
+    }
+    if (password == "") {
+      return false;
+    }
+    return true;
   }
 
   @override
