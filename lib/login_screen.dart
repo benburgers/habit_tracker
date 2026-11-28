@@ -1,4 +1,5 @@
 import 'package:material_ui/material_ui.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 import 'habit_tracker_screen.dart';
 import 'register_screen.dart';
@@ -18,11 +19,14 @@ class _LoginScreenState extends State<LoginScreen> {
   final String defaultUsername = 'testuser';
   final String defaultPassword = 'password123';
 
-  void _login() {
+  void _login() async {
     final username = _usernameController.text;
     final password = _passwordController.text;
 
     if (username == defaultUsername && password == defaultPassword) {
+      final prefs = await SharedPreferences.getInstance();
+      await prefs.setString("username", username);
+
       Navigator.pushReplacement(
         context,
         MaterialPageRoute(

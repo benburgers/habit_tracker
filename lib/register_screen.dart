@@ -1,5 +1,6 @@
 import 'package:material_ui/material_ui.dart';
 import 'package:fluttertoast/fluttertoast.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 import 'habit_tracker_screen.dart';
 import 'login_screen.dart';
@@ -78,6 +79,10 @@ class _RegisterScreenState extends State<RegisterScreen> {
       _showToast('Please fill in all fields');
       return;
     }
+
+    final prefs = await SharedPreferences.getInstance();
+    await prefs.setString("name", name);
+    await prefs.setString("username", username);
 
     Navigator.pushReplacement(
       context,
